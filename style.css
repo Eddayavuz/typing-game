@@ -1,0 +1,17 @@
+.error {
+    background-color: red;
+}
+
+.correct {
+    background-color: green;
+}
+
+span:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+}
+
+.highlight {
+    background-color: yellow;
+}
