@@ -1,7 +1,9 @@
 const quote = document.getElementById('quote');
 const input = document.getElementById('typed-value');
 const start = document.getElementById('start');
+const rocket = document.getElementById('rocketimg')
 const message = document.getElementById('message');
+
 const quotes = [
     'Things are only impossible until they are not',
     'It is possible to commit no errors and still lose. That is not a weakness. That is life',
@@ -27,18 +29,19 @@ function startGame() {
     quote.innerHTML = wordQueue.map(word => (`<span>${word}</span>`)).join('');// 
 
     highlightPosition = 0;
-    quote.childNodes[highlightPosition].className = 'highlight'
+    quote.childNodes[highlightPosition].className = 'highlight';
 
-    
     document.body.className = "";
-    start.className = "started";
+    rocket.className = "rocketFly";
+    
     setTimeout(() => {start.className = "button";},2000);
     startTime = new Date().getTime();
 
 }
 
 function checkInput() {
-    const currentWord = wordQueue[0].replaceAll(".","").replaceAll(",","");
+   
+    const currentWord = wordQueue[0].replaceAll(".","").replaceAll(",","").replaceAll(";","").replaceAll(":","").replaceAll("!","");
     const typedValue = input.value.trim();
 
     if (currentWord !== typedValue) {
@@ -58,7 +61,6 @@ function checkInput() {
 
     highlightPosition++;
     quote.childNodes[highlightPosition].className = 'highlight';
-    
 }
 
 function gameOver(){
