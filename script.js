@@ -4,13 +4,13 @@ const start = document.getElementById('start');
 const message = document.getElementById('message');
 
 const quotes = [
-    'Things are only impossible until they are not',
-    'It is possible to commit no errors and still lose. That is not a weakness. That is life',
-    'There is a way out of every box, a solution to every puzzle; it is just a matter of finding it.',
-    'Without freedom of choice there is no creativity',
-    'Logic is the beginning of wisdom, not the end',
-    'Improve a mechanical device and you may double productivity. But improve yourself, you gain a thousandfold',
-    'Compassion: that is the one thing no machine ever had. Maybe it is the one thing that keeps us ahead of them.',
+    'things are only impossible until they are not',
+    'it is possible to commit no errors and still lose. that is not a weakness. that is life',
+    'there is a way out of every box, a solution to every puzzle; it is just a matter of finding it.',
+    'without freedom of choice there is no creativity',
+    'logic is the beginning of wisdom, not the end',
+    'improve a mechanical device and you may double productivity. but improve yourself, you gain a thousandfold',
+    'compassion: that is the one thing no machine ever had. maybe it is the one thing that keeps us ahead of them.',
 ];
 
 let wordQueue;
