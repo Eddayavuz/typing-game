@@ -10,7 +10,7 @@ span:after {
 }
 
 .highlight {
-    color: rgb(255, 115, 0);
+    color: rgb(245, 234, 115);
     text-decoration: underline;
 }
 
@@ -52,12 +52,6 @@ span:after {
    100% { transform: translate(1px, -2px) rotate(-1deg); }
  }
 
- @keyframes zoomOutRight {
-   100% {
-     opacity: 0;
-     transform: scale(0.1) translate(500px, 0);
-   }
- }
  main {
     display: grid;
     place-items: center;
@@ -77,11 +71,11 @@ h1 {
 
 p {
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.3em;
 }
 body {
     font-family: arial, helvetica, sans-serif;
-    background-color: #0652DD;
+    background-color: #3679f6;
     color: white;
     display: flex;
     flex-direction: column;
@@ -110,9 +104,26 @@ input {
     align-self: center;
 }
   
-.congrats {
-    text-transform: uppercase;
-    font-size: 3em;
-    font-weight: bold;
-    color: #FFC312;
+.badge {
+    height: 70px;
+    animation: zoomOutRight 0.5s;
+    align-self: center;
+    animation: pulse 0.5s;
+    animation-iteration-count: 2; 
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.congrats{
+    font-size: 0.7em;
 }

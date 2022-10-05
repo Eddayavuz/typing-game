@@ -1,7 +1,6 @@
 const quote = document.getElementById('quote');
 const input = document.getElementById('typed-value');
 const start = document.getElementById('start');
-const rocket = document.getElementById('rocketimg')
 const message = document.getElementById('message');
 
 const quotes = [
@@ -27,7 +26,7 @@ function startGame() {
     const quoteIndex = Math.floor(Math.random() * quotes.length);
     const quoteText = quotes[quoteIndex];
     
-    message.innerHTML = "<span></span>"
+    message.innerHTML = "<img></img>"
 
     wordQueue = quoteText.split(' '); // ['type', 'me']
     quote.innerHTML = wordQueue.map(word => (`<span>${word}</span>`)).join('');// 
@@ -38,7 +37,6 @@ function startGame() {
     quote.childNodes[highlightPosition].className = 'highlight';
 
     document.body.className = "";
-    rocket.className = "rocketFly";
     wrongInput = 0;
 
     setTimeout(() => {start.className = "button";},2000);
@@ -83,7 +81,7 @@ function gameOver(){
     document.body.className = "winner";
     console.log("wrongInput =", wrongInput);
     message.innerHTML = ` 
-    <span class="congrats">Congratulations!</span><br>You finished in ${elapsedTime / 1000} seconds. With %${(wrongInput*quoteLen.length)/100} mistakes.
+    You finished in ${elapsedTime / 1000} seconds. With %${(wrongInput*quoteLen.length)/100} mistakes.<br><span class= 'congrats'>Congrats you earned a badge!<br><br><img class='badge' src='https://i.ibb.co/8jDPrJ0/rocket-badge.png'></img></span>
     `}
 
 start.addEventListener('click', startGame);
