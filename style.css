@@ -25,11 +25,17 @@ span:after {
     margin-left: 20px;
     background: url(https://cdn.glitch.me/fe55c52b-f859-4f17-a4c6-1af45426e959%2Frocket.png) right center no-repeat;
     background-size: 60px;
-    animation: zoomOutRight 0.5s;
+   
 }
 
-.started{
-   /*animation: shake 0.5s;*/
+.rocketFly{
+    display: block;
+    width: 60px;
+    height: 34px;
+    margin-left: 20px;
+    background: url(https://cdn.glitch.me/fe55c52b-f859-4f17-a4c6-1af45426e959%2Frocket.png) right center no-repeat;
+    background-size: 60px;
+    animation: zoomOutRight 0.5s;
 }
 
 @keyframes shake {
