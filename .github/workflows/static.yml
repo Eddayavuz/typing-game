@@ -33,7 +33,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
         with:
-          token: ${{ secrets.TYPING_GAME }}
+          token: ${{ secrets.TERARRIUM_TOKEN }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
